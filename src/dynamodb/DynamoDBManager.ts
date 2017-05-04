@@ -70,7 +70,7 @@ export class DynamoDBManager {
       queryInput.TableName = this.config.tableName;
       queryInput.KeyConditions = keyConditions;
       queryInput.IndexName = this.config.geohashIndexName;
-      queryInput.ConsistentRead = true;
+      queryInput.ConsistentRead = this.config.consistentRead;
       queryInput.ReturnConsumedCapacity = "TOTAL";
       queryInput.ExclusiveStartKey = lastEvaluatedKey;
 

@@ -33,6 +33,8 @@ export class GeoDataManagerConfiguration {
 
   longitudeFirst: true;
 
+  consistentRead: false;
+
   dynamoDBClient: DynamoDB;
 
   constructor(dynamoDBClient, tableName: string) {
